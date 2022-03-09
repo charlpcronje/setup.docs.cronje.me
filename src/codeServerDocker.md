@@ -21,8 +21,8 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Africa/Johannesburg
-      - PASSWORD=4334.4334            # Password to be entered when you open the url
-      - SUDO_PASSWORD=4334.4334       # So that VS Can edit you filesystem
+      - PASSWORD=changeme            # Password to be entered when you open the url
+      - SUDO_PASSWORD=changeme       # So that VS Can edit you filesystem
       - PROXY_DOMAIN=code.devserv.me 
       - DEFAULT_WORKSPACE=/var/www    # Where on your filesystem shout it be be when you open it
     volumes:

@@ -1,13 +1,13 @@
 ```sh
- __..___.__ .  ..___.__     __..___.___..  ..__    .  ..___
-(__ [__ [__)\  /[__ [__)   (__ [__   |  |  |[__)   |\/|[__ 
-.__)[___|  \ \/ [___|  \ * .__)[___  |  |__||    * |  |[___
+ __..___.___..  ..__    .__ .___.  .   .  ..___
+(__ [__   |  |  |[__)   |  \[__ \  /   |\/|[__ 
+.__)[___  |  |__||    * |__/[___ \/  * |  |[___                                      
 ```
 
 ## Development Server Details
 
 - `Hostname`: devserve.me
-- `IP`: 104.192.7.1851
+- `IP`: 104.192.7.185
 - `Server Location`: USA
 - `Hosting Provider`: ionos.com
 - `GIT Repo`: [github.com/charlpcronje/setup.docs.devserv.me](https://github.com/charlpcronje/setup.docs.devserv.me)

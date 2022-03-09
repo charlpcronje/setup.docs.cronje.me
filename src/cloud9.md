@@ -48,7 +48,7 @@ services:
       - TZ=Europe/London
       - GITURL=https://github.com/linuxserver/docker-cloud9.git
       - USERNAME=cp
-      - PASSWORD=4334.4334
+      - PASSWORD=changeme
     volumes:
       - /var/www:/code
       - /var/run/docker.sock:/var/run/docker.sock
