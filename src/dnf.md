@@ -1,0 +1,117 @@
+# Install DNF in RHEL/CentOS 7
+
+DNF stands for Dandified yum. DNF is a software package manager for RPM-based Linux distributions such as Fedora, RHEL and CentOS. It is the next upcoming major version of Yum. DNF is first introduced in Fedora and has replaced to become the default package manager of the Fedora distributions. DNF is same as Yum that installs, updates and removes packages on RPM bas4ed Linux systems. DNF is introduced for improving the bottlenecks of Yum such as performance, Memory usages, Dependency resolution, speed, and some other factors. The latest stable release of DNF is 1.0 and it is written in Python.
+
+To install DNF on RHEL/CentOS 7 systems, you need to set up and enable epel YUM REPO before installing DNF.
+
+## Install EPEL
+
+```shell
+yum install epel-release
+```
+
+## Install DNF
+
+```shell
+yum install dnf
+```
+
+## Using DNF
+
+You can now start to run commands using DNF. To view the man page you can use the following command:
+
+```shell
+dnf –help
+```
+
+## DNF vs YUM command Examples
+
+1. Install a Package
+
+```shell
+YUM: yum install <package>
+```
+
+Eg: yum install httpd
+
+```shell
+DNF: dnf install <package>
+```
+
+```shell
+Eg: dnf install httpd
+```
+
+## Upgrade a package
+
+```shell
+YUM: yum upgrade <package>
+```
+
+```shell
+Eg: yum update mysql-server
+```
+
+```shell
+DNF: dnf upgrade <package>
+```
+
+```shell
+Eg: dnf upgrade mysql-server
+```
+
+## Remove a package
+
+```shell
+YUM: yum remove <package>
+```
+
+Eg: yum remove httpd
+
+```shell
+DNF: dnf remove <package>
+```
+
+```shell
+Eg: dnf remove httpd
+```
+
+## Advantages of DNF
+
+- DNF comes with a simplified code: DNF has about 29000 lines of code compared to over 59000 in yum.
+- Support for multiple repositories.
+- Faster and lesser memory intensive operations compared to yum.
+- Simple interface.
+- DNF runs in both Python 2 and Python 3.
+- Simple configuration.
+- DNF has faster dependency resolving speed than yum.
+- RPM consistent behavior.
+- C bindings for lower level libraries.
+- Package group support, including multiple-repository groups.
+
+The default location of DNF configuration file is `/etc/dnf/dnf.conf`.
+
+## Available DNF commands
+
+- autoremove
+- check-update
+- clean
+- distro-sync
+- downgrade
+- group
+- help
+- history
+- info
+- install
+- list
+- makecache
+- mark
+- provides
+- reinstall
+- remove
+- repolist
+- repository-packages
+- search
+- updateinfo
+- upgrade
+- upgrade-to
