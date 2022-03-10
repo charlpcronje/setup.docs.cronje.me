@@ -33,7 +33,7 @@ sudo yum install -y mongodb-org
 
 ### Directory Paths
 
-### To Use Default `Directoriesicons/link.png`
+### To Use Default `Directories
 
 By default, `MongoDB` runs using the `mongod` user account and uses the following default directories:
 

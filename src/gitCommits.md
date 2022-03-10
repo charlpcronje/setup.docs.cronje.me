@@ -6,7 +6,7 @@
 |_Updated SSL Certificates and Vault_                                 |
 |charlpcronje committed 4 minutes ago                                 |
 |                                                                     |
-|_Updated Material Icons_                                             |
+|_Updated Material 
 |charlpcronje committed 5 minutes ago                                 |
 |                                                                     |
 |_Update Indexes_                                                     |
@@ -38,7 +38,7 @@
 |                                                                     |
 |**Commits on Jan 23, 2022**                                          |
 |                                                                     |
-|_Material Design Icons_                                              |
+|_Material Design 
 |charlpcronje committed yesterday                                     |
 |                                                                     |
 |_SSL and Reverse Proxy Setup_                                        |

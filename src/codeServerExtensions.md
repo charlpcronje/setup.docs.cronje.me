@@ -35,7 +35,7 @@ To enable `FiraCode` in the settings editor: under `Commonly Used`, expand the `
 - Docker Extension Pack
 - Project Manager
 - Settings Sync
-- Material Theme Icons
+- Material Theme 
 - Better Comments
 - Colorize
 - CSS Peek
