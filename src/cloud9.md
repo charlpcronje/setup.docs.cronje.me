@@ -1,4 +1,4 @@
-# Install linuxserver/cloud9
+# Install Cloud9
 
 `Cloud9` is a complete web based IDE with terminal access. This container is for running their core SDK locally and developing plugins.
 
