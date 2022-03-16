@@ -40,6 +40,7 @@
   - [Setup NginX Proxy Manager](nginxProxyManager.md)
 - **[SSL Certificates](sslCertificates.md)**
   - [Free Lets Encrypt SLL Certificates](letsEncryptSSL.md)
+- [Install Tomcat Server](tomcat.md)
 
 ### Virtual Hosts
 
