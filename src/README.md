@@ -63,6 +63,7 @@
 
 - [Install CWP Control Panel](cwp.md) - Do not install
 - [Install Cockpit Server Management](cockpit.md)
+- [Install dutree](dutree.md)
  
 ### File Management
 
