@@ -75,6 +75,7 @@
 
 - [Install CouchDB](couchDB.md)
 - [Install Mongo DB](mongodb.md)
+- [Install PostgreSQL](postgreSQL.md)
 
 ### Dashboards 
 
