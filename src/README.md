@@ -70,7 +70,7 @@
 - [Install Droppy](droppy.md)
 - [Install Samba](samba.md)
 
-### Datababases
+### Databases
 
 - [Install CouchDB](couchDB.md)
 - [Install Mongo DB](mongodb.md)
@@ -92,6 +92,7 @@
 - [Install Node.js on CentOS 7](node.md)
 - [Install Node Version Manager](nvm.md)
 - [Install Golang on CentOS 7](goLang.md)
+- [Install Java](java.md)
 
 ### Tools
 
