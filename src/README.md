@@ -81,6 +81,7 @@
 - [Install CouchDB](couchDB.md)
 - [Install Mongo DB](mongodb.md)
 - [Install PostgreSQL](postgreSQL.md)
+- [Install Redis](redis.md)
 
 ### Dashboards 
 
