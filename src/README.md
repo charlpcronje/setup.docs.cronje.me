@@ -33,6 +33,7 @@ tags: [open source,dev,software,contribute,js,php,firebase,mysql,oracle,log]
 - [Set SSH Port](sshPort.md)
 - [Install Fail2Ban](fail2ban.md)
 - [SELinux Disable if Necessary](selinux.md)
+- [KeyBase  End to end encryption](https://tools-docs.devserv.me/keybase)
 
 ### Server Name and Users
 
