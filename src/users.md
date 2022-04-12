@@ -57,7 +57,7 @@ passwd cc
 ## Add `cc` to `sudo` group
 
 ```shell
-usermod –aG wheel `cc`
+usermod -a -G wheel `cc`
 ```
 
 ## Switch to the Sudo User
