@@ -6,5 +6,5 @@
 
 # SERVER DNS, VHOSTS, FIREWALL
 
-- This repo will become a sub-module of docs.devserv.me.
+- This repo will become a sub-module of docs.CRONje.ME.
 - Go to [./src/README.md](./src/README.md) for the root of this repo

@@ -1,12 +1,12 @@
 ---
-title: Server & Software Setup | DEVserv.ME
+title: Server & Software Setup | CRONje.ME
 label: Server & Software Setup
 order: 100
 authors:
   - name: Charl Cronje
-    email: charl@devserv.me
-    link: https://charl-cv.devserv.me
-    avatar: https://assets.devserv.me/avatars/darker.jpg
+    email: charl@CRONje.ME
+    link: https://charl-cv.CRONje.ME
+    avatar: https://assets.CRONje.ME/avatars/darker.jpg
 tags: [open source,dev,software,contribute,js,php,firebase,mysql,oracle,log]
 ---
 
@@ -23,7 +23,7 @@ tags: [open source,dev,software,contribute,js,php,firebase,mysql,oracle,log]
 - `IP`: 104.192.7.185
 - `Server Location`: USA
 - `Hosting Provider`: ionos.com
-- `GIT Repo`: [github.com/charlpcronje/setup.docs.devserv.me](https://github.com/charlpcronje/setup.docs.devserv.me)
+- `GIT Repo`: [github.com/charlpcronje/setup.docs.CRONje.ME](https://github.com/charlpcronje/setup.docs.CRONje.ME)
 - `GIT Commit Messages`: [Git Commits](gitCommits.md)
 
 ## Development Server Setup
@@ -33,7 +33,7 @@ tags: [open source,dev,software,contribute,js,php,firebase,mysql,oracle,log]
 - [Set SSH Port](sshPort.md)
 - [Install Fail2Ban](fail2ban.md)
 - [SELinux Disable if Necessary](selinux.md)
-- [KeyBase  End to end encryption](https://tools-docs.devserv.me/keybase)
+- [KeyBase  End to end encryption](https://tools.docs.CRONje.ME/keybase)
 
 ### Server Name and Users
 

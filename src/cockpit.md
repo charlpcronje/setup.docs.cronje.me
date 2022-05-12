@@ -29,7 +29,7 @@ To make Cockpit proxy aware, you will need to modify the Cockpit config file loc
 
 ```conf
 [WebService]
-Origins = https://cockpit.devserv.me wss://cockpit.devserv.me
+Origins = https://cockpit.CRONje.ME wss://cockpit.CRONje.ME
 ProtocolHeader = X-Forwarded-Proto
 ```
 

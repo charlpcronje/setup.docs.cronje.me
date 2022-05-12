@@ -34,13 +34,13 @@ Open `retype.yml`
 #Your file content should be updated to look something like
 input: src                    # Where Retype will look for the files to generate site from
 output: public                # The destination where it must create the website
-url: http://docs.devserv.me   # Optional, this is where the site will be hosted
+url: http://docs.CRONje.ME   # Optional, this is where the site will be hosted
 branding:
   title: Dev Serv Docs
   label: Docs
 links:                        # Here you can add as many links as you want, repeating the -text, link
 - text: Getting Started
-  link: http://docs.devserv.me/gettingStarted/
+  link: http://docs.CRONje.ME/gettingStarted/
 footer:
   copyright: "webAlly &copy; Copyright {{ year }}. All rights reserved."
 ```

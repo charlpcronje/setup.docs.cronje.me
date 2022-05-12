@@ -54,4 +54,4 @@ Error: no DISPLAY environment variable specified
 
 That means everything is working, now you just need to specify your local display for displaying the browser, for that you need to have X11 forwarding and an XServer. But no big deal, just two quick steps here
 
-[X11 Forwarding](https://tips-docs.devserv.me/x11forwarding)
+[X11 Forwarding](https://tips.docs.CRONje.ME/x11forwarding)

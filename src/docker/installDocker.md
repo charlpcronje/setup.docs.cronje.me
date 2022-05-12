@@ -2,7 +2,7 @@
 
 > Update 2022-01-22
 > Your might find that you need have container communicate with each other, have a look at:
-> [Docker Networks](https://tips-docs.devserv.me/dockerNetworks)
+> [Docker Networks](https://tips.docs.CRONje.ME/dockerNetworks)
 
 ## Prerequisites
 

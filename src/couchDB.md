@@ -36,7 +36,7 @@ TZ: Africa/Johannesburg
 
 > Click on Deploy Stack
 
-Now you should be able to access your instance of CouchDB by going to [http://devserv.me:4449/_utils](http://devserv.me:4449/_utils)
+Now you should be able to access your instance of CouchDB by going to [http://CRONje.ME:4449/_utils](http://CRONje.ME:4449/_utils)
 
 ## Yum Install
 

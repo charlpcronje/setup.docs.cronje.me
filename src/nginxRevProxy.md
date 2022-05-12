@@ -2,7 +2,7 @@
 
 ## Why reverse proxy
 
-I realized that a lot of the web applications I installed and will be installing does not run on port 80 and are not hosted on Apache, So I need a way to control all of this traffic, I need way to use my SSL certificate on all the ports and I need a way to point my sub-domains to a specific port so that I don't have to use `http://devserv.me:9000` for portainer but that I can use `portainer.devserv.me`.
+I realized that a lot of the web applications I installed and will be installing does not run on port 80 and are not hosted on Apache, So I need a way to control all of this traffic, I need way to use my SSL certificate on all the ports and I need a way to point my sub-domains to a specific port so that I don't have to use `http://CRONje.ME:9000` for portainer but that I can use `portainer.CRONje.ME`.
 
 ## Install NginX
 
@@ -70,7 +70,7 @@ user apache;
 server {
         listen       80;
         listen       [::]:80;
-        server_name  devserv.me;
+        server_name  CRONje.ME;
         root         /var/www;
 
         # Load configuration files for the default server block.

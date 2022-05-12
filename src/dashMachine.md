@@ -20,7 +20,7 @@ services:
 
   dashmachine:
     container_name: dashmachine
-    hostname: dm.devserv.me
+    hostname: dm.CRONje.ME
     image: rmountjoy/dashmachine
     logging:
       driver: json-file

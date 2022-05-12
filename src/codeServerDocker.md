@@ -23,7 +23,7 @@ services:
       - TZ=Africa/Johannesburg
       - PASSWORD=changeme            # Password to be entered when you open the url
       - SUDO_PASSWORD=changeme       # So that VS Can edit you filesystem
-      - PROXY_DOMAIN=code.devserv.me 
+      - PROXY_DOMAIN=code.CRONje.ME 
       - DEFAULT_WORKSPACE=/var/www    # Where on your filesystem shout it be be when you open it
     volumes:
       - /var/www/tools/vscode/config:/config

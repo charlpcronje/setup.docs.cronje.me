@@ -8,4 +8,4 @@ Install whiptail by using the following command:
 sudo dnf install newt
 ```
 
-Whiptail Usage, look at [Tips & Tricks](https://tips-docs.devserv.me)
+Whiptail Usage, look at [Tips & Tricks](https://tips.docs.CRONje.ME)

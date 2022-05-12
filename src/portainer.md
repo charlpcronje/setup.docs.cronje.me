@@ -215,8 +215,8 @@ docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer_data:/data \
     portainer/portainer-ce:2.11.0 \
-    --sslcert /srv/cert/devserv.me_ssl_certificate.cer \
-    --sslkey /srv/cert/_.devserv.me_private_key.key
+    --sslcert /srv/cert/CRONje.ME_ssl_certificate.cer \
+    --sslkey /srv/cert/_.CRONje.ME_private_key.key
 ```
 
 The newest version of Portainer will now be deployed on your system, using the persistent data from the previous version, and will also upgrade the Portainer database to the new version.
