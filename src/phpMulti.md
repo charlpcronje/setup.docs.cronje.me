@@ -321,6 +321,14 @@ sudo rm -rf /var/www/site2.your_domain/info.php
 
 You now have a single CentOS 8 server handling two websites with two different PHP versions. PHP-FPM, however, is not limited to this one application.
 
+There are still a few things that could have gone wrong during the setup that I did not all handle in these docs, but here are some links if you get stuck:
+
+- [https://www.linuxcapable.com/how-to-install-php-8-1-on-centos-8-stream/](https://www.linuxcapable.com/how-to-install-php-8-1-on-centos-8-stream/)
+- [https://stackoverflow.com/questions/63080021/php-installation-error-it-is-not-possible-to-switch-enabled-streams-of-a-modul](https://stackoverflow.com/questions/63080021/php-installation-error-it-is-not-possible-to-switch-enabled-streams-of-a-modul)
+- [https://www.digitalocean.com/community/tutorials/how-to-run-multiple-php-versions-on-one-server-using-apache-and-php-fpm-on-centos-7](https://www.digitalocean.com/community/tutorials/how-to-run-multiple-php-versions-on-one-server-using-apache-and-php-fpm-on-centos-7)
+- [https://stackoverflow.com/questions/66043552/make-php7-and-php-8-live-together](https://stackoverflow.com/questions/66043552/make-php7-and-php-8-live-together)
+
+
 ## Conclusion
 
 You have now combined virtual hosts and PHP-FPM to serve multiple websites and multiple versions of PHP on a single server. The only practical limit on the number of PHP sites and PHP versions that your Apache service can handle is the processing power of your instance.
