@@ -1,7 +1,40 @@
 ---
 title: Install Portainer 2.0 on your Docker
+label: Server & Software Setup
+order: 100
+authors:
+  - name: Charl Cronje
+    email: charl@CRONje.ME
+    link: https://blog.cronje.me
+    avatar: https://assets.cronje.me/avatars/darker.jpg
+edit:
+  repo: "https://github.com/charlpcronje/setup.docs.devserv.me/edit/"
+  base: /src
+  branch: main
+  label: Edit on GitHub
+editor:
+  enabled: false
+favicon: favicon.png
+links:
+- text: Dashboard
+  link: https://nav.cronje.me
+- text: Blog / Portfolio
+  link: https://blog.cronje.me
+- text: Wiki, Tips and Docs 
+  link: https://docs.cronje.me
+- text: My CV
+  link: https://cv.cronje.me
+- text: LinkedIn
+  link: https://www.linkedin.com/in/charlpcronje
+- text: GitHub
+  link: https://github.com/charlpcronje
+- text: Upwork Profile
+  link: https://www.upwork.com/freelancers/~01ccb1439024ec9c50
+footer:
+  copyright: "webAlly &copy; Copyright {{ year }}. All rights reserved."
 ---
 <script type="text/javascript">(function(w,s){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://cdn.pagesense.io/js/webally/f2527eebee974243853bcd47b32631f4.js";var x=document.getElementsByTagName("script")[0];x.parentNode.insertBefore(e,x);})(window,"script");</script>
+
 
 ## Prerequisites
 
@@ -49,7 +82,7 @@ After the volume has been created, run the command below on your terminal:
 sudo docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
 ```
 
-We will use the latest version of portainer.io which is 2.0, the above command is from Docker I am considering that you already have experience with the basic commands.
+We will use the latest version of `portainer.io` which is 2.0, the above command is from Docker I am considering that you already have experience with the basic commands.
 
 ```shell
 # Commands Docker basics:
@@ -65,13 +98,13 @@ docker kill CONTAINER ID        # shut down Container
 docker images                   # list all images have been downloaded
 ```
 
-### Step 2 - Check if portainer.io is running on Docker
+### Step 2 - Check if `portainer.io` is running on Docker
 
-Ready your [portainer.io](Portainer.io) is already installed and running on its default port which is [SERVER_IP: 9000]([http://server_ip:9000/]([http://server_ip:9000/)) as you can see in our image.
+Ready your [portainer.io](http://portainer.io) is already installed and running on its default port which is [SERVER_IP: 9000]([http://server_ip:9000/]([http://server_ip:9000/)) as you can see in our image.
 
 [img2](portainer/2png.png)
 
-[Portainer.io](Portainer.io) has several services that can help us in our daily lives, such as:
+[Portainer.io](http://portainer.io) has several services that can help us in our daily lives, such as:
 
 [Portainer CE for Kubernetes](https://www.portainer.io/portainer-ce/portainer-ce-for-kubernetes/)
 [Portainer CE for Swarm](https://www.portainer.io/portainer-ce/portainer-ce-for-swarm/)
@@ -102,7 +135,7 @@ In the Portainer home screen, all Endpoints (environments) configured will appea
 
 ![img](portainer/4.png)
 
-In your case, select the local Endpoint to view your portainer.io.
+In your case, select the local Endpoint to view your `portainer.io`.
 
 ![img3](portainer/5.png)
 
@@ -110,13 +143,13 @@ On my initial Dashboard, I can see my stacks, containers, volumes, services, ima
 
 ### Step 4 - Downloading and configuring Docker image on your Portainer
 
-In our first example, we will use the **WordPress** installation, where we will do the initial setup on the dashboard our portainer.io.
+In our first example, we will use the **WordPress** installation, where we will do the initial setup on the dashboard our `portainer.io`.
 
 After selecting the option containers we will see the following screen:
 
 ![img3](portainer/6.png)
 
-Then portainer.io will present the following screen:
+Then `portainer.io` will present the following screen:
 
 ![img3](portainer/7.png)
 
@@ -136,7 +169,7 @@ SERVER_IP:80
 
 ### Step 6 - Endpoints
 
-We arrived at the second and last part of our post, but don't stop here portainer.io has many functions to be explored!
+We arrived at the second and last part of our post, but don't stop here `portainer.io` has many functions to be explored!
 
 ![img3](portainer/9.png)
 
@@ -158,14 +191,14 @@ Ready! If everything goes as expected, the agent will appear as running on your 
 
 ![img3](portainer/9.png)
 
-To test the functioning of your new machine, go to your portainer.io home screen.
+To test the functioning of your new machine, go to your `portainer.io` home screen.
 
 ![img3](portainer/10.png)
 
 Access the machine you just connected and repeat our installation of WordPress on the second machine.
 
 - So, did you like the content? You can't help but know how to update WordPress, as updates are an important part of system security, they improve performance and bring new features. Also, updating your site requires only a few clicks. It's simple, fast and essential!
-- Last tip: Before starting a project in production with portainer.io, research the limitations of your UI and if it will meet all your needs in the course of the project.
+- Last tip: Before starting a project in production with `portainer.io`, research the limitations of your UI and if it will meet all your needs in the course of the project.
 - A very good place to search is the official forum, he also has Blog, channels on, Discord and a good documentation.
 - The hello-world container is only a simple container used to verify if the Docker engine is working correctly in the system and if the Portainer can start a container on the board. We will build more complex containers in the next sections.
 

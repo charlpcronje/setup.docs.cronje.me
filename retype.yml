@@ -4,6 +4,19 @@ url: https://setup.docs.cronje.me
 branding:
   title: CRONje.ME Setup Docs
   label: Docs
+authors:
+  - name: Charl Cronje
+    email: charl@CRONje.ME
+    link: https://blog.cronje.me
+    avatar: https://assets.cronje.me/avatars/darker.jpg
+edit:
+  repo: "https://github.com/charlpcronje/setup.docs.devserv.me/edit/"
+  base: /src
+  branch: main
+  label: Edit on GitHub
+editor:
+  enabled: false
+favicon: favicon.png
 links:
 - text: Dashboard
   link: https://nav.cronje.me

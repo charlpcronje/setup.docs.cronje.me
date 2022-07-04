@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-cache-control" content="no-cache">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 2.2">
+
+    <!-- Primary Meta Tags -->
+    <title>Install MongoDB Community Edition on Centos 7</title>
+    <meta name="title" content="Install MongoDB Community Edition on Centos 7">
+    <meta name="description" content="This tutorial installs MongoDB 5.0 Community Edition." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/mongodb/">
+    <meta property="og:title" content="Install MongoDB Community Edition on Centos 7">
+    <meta property="og:description" content="This tutorial installs MongoDB 5.0 Community Edition.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="/mongodb/">
+    <meta property="twitter:title" content="Install MongoDB Community Edition on Centos 7">
+    <meta property="twitter:description" content="This tutorial installs MongoDB 5.0 Community Edition.">
+
+    <script>(function () { var el = document.documentElement, m = "dark", wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
+
+    <link href="/resources/css/retype.css?v=2.2.710270871754" rel="stylesheet" data-turbo-track="reload" />
+
+    <script type="text/javascript" src="/resources/js/config.js?v=2.2.710270871754" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.710270871754" defer></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=2.2.710270871754" defer></script>
+</head>
+<body>
+    <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
+        <div class="absolute bottom-0 left-0 bg-gray-100 dark:bg-dark-800" style="top: 5rem; right: 50%"></div>
+    
+        <header id="docs-site-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
+            <div class="container relative flex items-center justify-between grow pr-6 md:justify-start">
+                <!-- Mobile menu button skeleton -->
+                <button v-cloak class="skeleton docs-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+                <div v-cloak id="docs-sidebar-toggle"></div>
+        
+                <!-- Logo -->
+                <div class="flex items-center justify-between h-full py-2 md:w-75">
+                    <div class="flex items-center px-2 md:px-6">
+                        <a id="docs-site-logo" href="/" class="flex items-center leading-snug text-2xl">
+                            <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">Project Name</span>
+                        </a>
+                    </div>
+        
+                    <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
+                </div>
+        
+                <div class="flex justify-between md:grow">
+                    <!-- Top Nav -->
+                    <nav class="hidden md:flex">
+                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        </ul>
+                    </nav>
+        
+                    <!-- Header Right Skeleton -->
+                    <div v-cloak class="flex justify-end grow skeleton">
+        
+                        <!-- Search input mock -->
+                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                            </div>
+        
+                            <input class="w-full h-10 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 placeholder-gray-400 dark:placeholder-dark-400"
+                            style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search" />
+                        </div>
+        
+                        <!-- Mobile search button mock -->
+                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                        </div>
+        
+                        <!-- Dark mode switch placehokder -->
+                        <div class="w-10 h-10 lg:ml-2"></div>
+        
+                        <!-- History button mock -->
+                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                        </div>
+                    </div>
+        
+                    <div v-cloak class="flex justify-end grow">
+                        <div id="docs-mobile-search-button"></div>
+                        <doc-search-desktop></doc-search-desktop>
+        
+                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                        <doc-history></doc-history>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <div class="container relative flex bg-white">
+            <!-- Sidebar Skeleton -->
+            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-gray-100 border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
+            
+                <!-- Render this div, if config.showSidebarFilter is `true` -->
+                <div class="flex items-center h-16 px-6">
+                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter" />
+                </div>
+            
+                <div class="pl-6 mb-4 mt-1">
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                </div>
+            
+                <div class="shrink-0 mt-auto bg-transparent dark:border-dark-650">
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Sidebar component -->
+            <doc-sidebar v-cloak>
+                <template #sidebar-footer>
+                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-dark-650">
+            
+                        <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                            <span class="text-xs whitespace-nowrap">Powered by</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                        </a>
+                    </div>
+                </template>
+            </doc-sidebar>
+    
+            <div class="grow min-w-0 dark:bg-dark-850">
+                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+                <div class="flex">
+                    <div class="grow min-w-0 px-6 md:px-16">
+                        <main class="relative pt-6 pb-16">
+                            <div class="docs-markdown" id="docs-content">
+                                <!-- Rendered if sidebar right is enabled -->
+                                <div id="docs-sidebar-right-toggle"></div>
+                
+                                <!-- Page content  -->
+<doc-anchor-target id="install-mongodb-community-edition-on-centos-7" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#install-mongodb-community-edition-on-centos-7">#</doc-anchor-trigger>
+        <span>Install MongoDB Community Edition on Centos 7</span>
+    </h1>
+</doc-anchor-target>
+<div class="-mt-3 mb-12 flex flex-wrap text-sm text-gray-400 dark:text-dark-350">
+    <div class="flex items-center">
+        <div>By</div>
+        <div class="ml-2 flex items-center">
+          <div class="shrink-0 w-8 h-8 overflow-hidden rounded-full">
+            <a href="https://blog.cronje.me"><img class="object-cover" src="https://assets.cronje.me/avatars/darker.jpg"/></a>
+          </div>
+          <div class="ml-1 whitespace-nowrap text-gray-500 dark:text-dark-350"><a href="https://blog.cronje.me">Charl Cronje</a></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">(function(w,s){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://cdn.pagesense.io/js/webally/f2527eebee974243853bcd47b32631f4.js";var x=document.getElementsByTagName("script")[0];x.parentNode.insertBefore(e,x);})(window,"script");</script>
+<doc-anchor-target id="mongodb-version">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mongodb-version">#</doc-anchor-trigger>
+        <span>MongoDB Version</span>
+    </h2>
+</doc-anchor-target>
+<p>This tutorial installs MongoDB 5.0 Community Edition. To install a different version of MongoDB Community, use the version drop-down menu in the upper-left corner of this page to select the documentation for that version.</p>
+<p>Follow these steps to install MongoDB Community Edition using the yum package manager.</p>
+<doc-anchor-target id="configure-the-package-management-system-yum">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#configure-the-package-management-system-yum">#</doc-anchor-trigger>
+        <span>Configure the package management system (yum)</span>
+    </h2>
+</doc-anchor-target>
+<p>Create a <code v-pre>/etc/yum.repos.d/mongodb-org-5.0.repo</code> file so that you can install MongoDB directly using yum:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">[mongodb-org-5.0]
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/5.0/x86_64/
+gpgcheck=1
+enabled=1
+gpgkey=https://www.mongodb.org/static/pgp/server-5.0.asc</code></pre>
+</doc-codeblock></div>
+<p>You can also download the <code v-pre>.rpm</code> files directly from the <code v-pre>MongoDB</code> repository. Downloads are organized by Red Hat / CentOS version <code v-pre>(e.g. 7)</code>, then <code v-pre>MongoDB</code> release version <code v-pre>(e.g. 5.0)</code>, then architecture <code v-pre>(e.g. x86_64)</code>.</p>
+<p>Prior to <code v-pre>MongoDB 5.0</code>, odd-numbered <code v-pre>MongoDB</code> release versions, such as <code v-pre>4.3</code>, were development releases. Beginning with <code v-pre>MongoDB</code> 5.1, <code v-pre>MongoDB</code> has quarterly rapid releases. For more information on the differences between rapid and long-term support releases, see <code v-pre>MongoDB</code> Versioning.</p>
+<doc-anchor-target id="install-the-mongodb-packages">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#install-the-mongodb-packages">#</doc-anchor-trigger>
+        <span>Install the MongoDB packages</span>
+    </h2>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">sudo yum install -y mongodb-org</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="run-mongodb-community-edition">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#run-mongodb-community-edition">#</doc-anchor-trigger>
+        <span>Run MongoDB Community Edition</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="directory-paths">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#directory-paths">#</doc-anchor-trigger>
+        <span>Directory Paths</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="to-use-default-directories">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#to-use-default-directories">#</doc-anchor-trigger>
+        <span>To Use Default &#x60;Directories</span>
+    </h3>
+</doc-anchor-target>
+<p>By default, <code v-pre>MongoDB</code> runs using the <code v-pre>mongod</code> user account and uses the following default directories:</p>
+<ul>
+<li><code v-pre>/var/lib/mongo</code> (the data directory)</li>
+<li><code v-pre>/var/log/mongodb</code> (the log directory)</li>
+</ul>
+<doc-anchor-target id="to-use-non-default-directories">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#to-use-non-default-directories">#</doc-anchor-trigger>
+        <span>To Use Non-Default Directories</span>
+    </h2>
+</doc-anchor-target>
+<p>To use a data directory and/or log directory other than the default directories:</p>
+<doc-anchor-target id="create-the-new-directory-or-directories">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#create-the-new-directory-or-directories">#</doc-anchor-trigger>
+        <span>Create the new directory or directories</span>
+    </h3>
+</doc-anchor-target>
+<p>Edit the configuration file <code v-pre>/etc/mongod.conf</code> and modify the following fields accordingly:</p>
+<ul>
+<li><code v-pre>storage.dbPath</code> to specify a new data directory path (<code v-pre>e.g. /some/data/directory</code>)</li>
+<li><code v-pre>systemLog.path</code> to specify a new log file path (e.g. <code v-pre>/some/log/directory/mongod.log</code>)</li>
+<li>Ensure that the user running MongoDB has access to the directory or directories:</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">sudo chown -R mongod:mongod &lt;directory&gt;</code></pre>
+</doc-codeblock></div>
+<p>If you change the user that runs the MongoDB process, you must give the new user access to these directories.</p>
+<doc-anchor-target id="permit-access-to-netstat-for-ftdc">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#permit-access-to-netstat-for-ftdc">#</doc-anchor-trigger>
+        <span>Permit Access to netstat for FTDC</span>
+    </h3>
+</doc-anchor-target>
+<p>The current SELinux Policy does not allow the MongoDB process to open and read /proc/net/netstat, which is required for Full Time Diagnostic Data Capture (FTDC). If you intend to run SELinux in enforcing mode, you will need to make the following adjustment to your SELinux policy:</p>
+<p>Ensure your system has the checkpolicy package installed:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">sudo yum install checkpolicy</code></pre>
+</doc-codeblock></div>
+<p>Create a custom policy file <code v-pre>mongodb_proc_net.te</code>:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">cat &gt; mongodb_proc_net.te &lt;&lt;EOF
+module mongodb_proc_net 1.0;
+require {
+        type sysctl_net_t;
+        type mongod_t;
+        class dir search;
+        class file { getattr open read };
+}
+#============= mongod_t ==============
+#!!!! This avc is allowed in the current policy
+allow mongod_t sysctl_net_t:dir search;
+allow mongod_t sysctl_net_t:file open;
+#!!!! This avc is allowed in the current policy
+allow mongod_t sysctl_net_t:file { getattr read };
+EOF</code></pre>
+</doc-codeblock></div>
+<p>Once created, compile and load the custom policy module by running these three commands:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">- checkmodule -M -m -o mongodb_proc_net.mod mongodb_proc_net.te
+- semodule_package -o mongodb_proc_net.pp -m mongodb_proc_net.mod
+- sudo semodule -i mongodb_proc_net.pp</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="using-a-custom-mongodb-directory-path">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#using-a-custom-mongodb-directory-path">#</doc-anchor-trigger>
+        <span>Using a Custom MongoDB Directory Path</span>
+    </h3>
+</doc-anchor-target>
+<p>Update the SELinux policy to allow the mongod service to use the new directory:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">sudo semanage fcontext -a -t &lt;type&gt; &lt;/some/MongoDB/directory.*&gt;</code></pre>
+</doc-codeblock></div>
+<p>where specify one of the following types as appropriate:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">mongod_var_lib_t for data directory
+mongod_log_t for log file directory
+mongod_var_run_t for pid file directory</code></pre>
+</doc-codeblock></div>
+<blockquote>
+<p>NOTE
+Be sure to include the .* at the end of the directory.</p>
+</blockquote>
+<p>Update the SELinux user policy for the new directory:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">sudo chcon -Rv -u system_u -t &lt;type&gt; &lt;/some/MongoDB/directory&gt;</code></pre>
+</doc-codeblock></div>
+<p>where specify one of the following types as appropriate:</p>
+<ul>
+<li><code v-pre>mongod_var_lib_t</code> for data directory</li>
+<li><code v-pre>mongod_log_t</code> for log directory</li>
+<li><code v-pre>mongod_var_run_t</code> for pid file directory</li>
+</ul>
+<p>Apply the updated SELinux policies to the directory:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">sudo restorecon -R -v &lt;/some/MongoDB/directory&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="start-mongodb">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#start-mongodb">#</doc-anchor-trigger>
+        <span>Start MongoDB</span>
+    </h2>
+</doc-anchor-target>
+<p>You can start the mongod process by issuing the following command:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">sudo systemctl start mongod</code></pre>
+</doc-codeblock></div>
+<p>If you receive an error similar to the following when starting mongod:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">Failed to start mongod.service: Unit mongod.service not found.</code></pre>
+</doc-codeblock></div>
+<p>Run the following command first:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">sudo systemctl daemon-reload</code></pre>
+</doc-codeblock></div>
+<p>Then run the start command above again.</p>
+<p>Verify that MongoDB has started successfully.
+You can verify that the mongod process has started successfully by issuing the following command:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">sudo systemctl status mongod</code></pre>
+</doc-codeblock></div>
+<p>You can optionally ensure that MongoDB will start following a system reboot by issuing the following command:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">sudo systemctl enable mongod</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="stop-mongodb">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#stop-mongodb">#</doc-anchor-trigger>
+        <span>Stop MongoDB</span>
+    </h3>
+</doc-anchor-target>
+<p>As needed, you can stop the mongod process by issuing the following command:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">sudo systemctl stop mongod</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="restart-mongodb">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#restart-mongodb">#</doc-anchor-trigger>
+        <span>Restart MongoDB</span>
+    </h3>
+</doc-anchor-target>
+<p>You can restart the mongod process by issuing the following command:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">sudo systemctl restart mongod</code></pre>
+</doc-codeblock></div>
+<p>You can follow the state of the process for errors or important messages by watching the output in the /var/log/mongodb/mongod.log file.</p>
+<doc-anchor-target id="begin-using-mongodb">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#begin-using-mongodb">#</doc-anchor-trigger>
+        <span>Begin using MongoDB</span>
+    </h3>
+</doc-anchor-target>
+<p>Start a mongosh session on the same host machine as the mongod. You can run mongosh without any command-line options to connect to a mongod that is running on your localhost with default port 27017.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">mongosh</code></pre>
+</doc-codeblock></div>
+<p>For more information on connecting using mongosh, such as to connect to a mongod instance running on a different host and/or port, see the mongosh documentation.</p>
+<p>To help you start using MongoDB, MongoDB provides Getting Started Guides in various driver editions. For the driver documentation, see Start Developing with MongoDB.</p>
+<doc-anchor-target id="uninstall-mongodb-community-edition">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#uninstall-mongodb-community-edition">#</doc-anchor-trigger>
+        <span>Uninstall MongoDB Community Edition</span>
+    </h3>
+</doc-anchor-target>
+<p>To completely remove MongoDB from a system, you must remove the MongoDB applications themselves, the configuration files, and any directories containing data and logs. The following section guides you through the necessary steps.</p>
+<blockquote>
+<p>This process will completely remove MongoDB, its configuration, and all databases. This process is not reversible, so ensure that all of your configuration and data is backed up before proceeding.</p>
+</blockquote>
+<doc-anchor-target id="mongodb-stop">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mongodb-stop">#</doc-anchor-trigger>
+        <span>MongoDB Stop</span>
+    </h2>
+</doc-anchor-target>
+<p>Stop the mongod process by issuing the following command:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">sudo service mongod stop</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="remove-packages">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#remove-packages">#</doc-anchor-trigger>
+        <span>Remove Packages</span>
+    </h3>
+</doc-anchor-target>
+<p>Remove any MongoDB packages that you had previously installed.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">sudo yum erase $(rpm -qa | grep mongodb-org)</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="remove-data-directories">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#remove-data-directories">#</doc-anchor-trigger>
+        <span>Remove Data Directories</span>
+    </h3>
+</doc-anchor-target>
+<p>Remove MongoDB databases and log files.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">sudo rm -r /var/log/mongodb
+sudo rm -r /var/lib/mongo</code></pre>
+</doc-codeblock></div>
+
+                                
+                                <!-- Required only on API pages -->
+                                <doc-toolbar-member-filter-no-results />
+                            </div>
+                            <footer class="clear-both">
+                            
+                                <nav class="flex mt-14">
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/monitorr/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                                                <span class="block mt-1">Server & Software Setup</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/nginx/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                                                <span class="block mt-1">Server & Software Setup</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
+                                    </div>
+                                </nav>
+                            </footer>
+                        </main>
+                
+                        <div class="border-t dark:border-dark-650 pt-6 mb-8">
+                            <footer class="flex flex-wrap items-center justify-between">
+                                <div>
+                                    <ul class="flex flex-wrap items-center text-sm">
+                                    </ul>
+                                </div>
+                                <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"></div>
+                            </footer>
+                        </div>
+                    </div>
+                
+                    <!-- Rendered if sidebar right is enabled -->
+                    <!-- Sidebar right skeleton-->
+                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-white border-gray-200 lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton dark:bg-dark-850 dark:border-dark-650">
+                        <div class="pl-5">
+                            <div class="w-32 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-48 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-40 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                        </div>
+                    </div>
+                
+                    <!-- User should be able to hide sidebar right -->
+                    <doc-sidebar-right v-cloak></doc-sidebar-right>
+                </div>
+
+            </div>
+        </div>
+    
+        <doc-search-mobile></doc-search-mobile>
+        <doc-back-to-top></doc-back-to-top>
+    </div>
+
+
+    <div id="docs-overlay-target"></div>
+
+    <script>window.__DOCS__ = { "title": "Server & Software Setup", icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
+</body>
+</html>

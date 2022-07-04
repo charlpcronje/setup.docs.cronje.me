@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-cache-control" content="no-cache">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 2.2">
+
+    <!-- Primary Meta Tags -->
+    <title>Droppy</title>
+    <meta name="title" content="Droppy">
+    <meta name="description" content="droppy is a self-hosted file storage server with a web interface and capabilities to edit files and view media directly in the browser." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/droppy/">
+    <meta property="og:title" content="Droppy">
+    <meta property="og:description" content="droppy is a self-hosted file storage server with a web interface and capabilities to edit files and view media directly in the browser.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="/droppy/">
+    <meta property="twitter:title" content="Droppy">
+    <meta property="twitter:description" content="droppy is a self-hosted file storage server with a web interface and capabilities to edit files and view media directly in the browser.">
+
+    <script>(function () { var el = document.documentElement, m = "dark", wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
+
+    <link href="/resources/css/retype.css?v=2.2.710270871754" rel="stylesheet" data-turbo-track="reload" />
+
+    <script type="text/javascript" src="/resources/js/config.js?v=2.2.710270871754" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.710270871754" defer></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=2.2.710270871754" defer></script>
+</head>
+<body>
+    <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
+        <div class="absolute bottom-0 left-0 bg-gray-100 dark:bg-dark-800" style="top: 5rem; right: 50%"></div>
+    
+        <header id="docs-site-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
+            <div class="container relative flex items-center justify-between grow pr-6 md:justify-start">
+                <!-- Mobile menu button skeleton -->
+                <button v-cloak class="skeleton docs-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+                <div v-cloak id="docs-sidebar-toggle"></div>
+        
+                <!-- Logo -->
+                <div class="flex items-center justify-between h-full py-2 md:w-75">
+                    <div class="flex items-center px-2 md:px-6">
+                        <a id="docs-site-logo" href="/" class="flex items-center leading-snug text-2xl">
+                            <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">Project Name</span>
+                        </a>
+                    </div>
+        
+                    <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
+                </div>
+        
+                <div class="flex justify-between md:grow">
+                    <!-- Top Nav -->
+                    <nav class="hidden md:flex">
+                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        </ul>
+                    </nav>
+        
+                    <!-- Header Right Skeleton -->
+                    <div v-cloak class="flex justify-end grow skeleton">
+        
+                        <!-- Search input mock -->
+                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                            </div>
+        
+                            <input class="w-full h-10 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 placeholder-gray-400 dark:placeholder-dark-400"
+                            style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search" />
+                        </div>
+        
+                        <!-- Mobile search button mock -->
+                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                        </div>
+        
+                        <!-- Dark mode switch placehokder -->
+                        <div class="w-10 h-10 lg:ml-2"></div>
+        
+                        <!-- History button mock -->
+                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                        </div>
+                    </div>
+        
+                    <div v-cloak class="flex justify-end grow">
+                        <div id="docs-mobile-search-button"></div>
+                        <doc-search-desktop></doc-search-desktop>
+        
+                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                        <doc-history></doc-history>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <div class="container relative flex bg-white">
+            <!-- Sidebar Skeleton -->
+            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-gray-100 border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
+            
+                <!-- Render this div, if config.showSidebarFilter is `true` -->
+                <div class="flex items-center h-16 px-6">
+                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter" />
+                </div>
+            
+                <div class="pl-6 mb-4 mt-1">
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                </div>
+            
+                <div class="shrink-0 mt-auto bg-transparent dark:border-dark-650">
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Sidebar component -->
+            <doc-sidebar v-cloak>
+                <template #sidebar-footer>
+                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-dark-650">
+            
+                        <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                            <span class="text-xs whitespace-nowrap">Powered by</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                        </a>
+                    </div>
+                </template>
+            </doc-sidebar>
+    
+            <div class="grow min-w-0 dark:bg-dark-850">
+                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+                <div class="flex">
+                    <div class="grow min-w-0 px-6 md:px-16">
+                        <main class="relative pt-6 pb-16">
+                            <div class="docs-markdown" id="docs-content">
+                                <!-- Rendered if sidebar right is enabled -->
+                                <div id="docs-sidebar-right-toggle"></div>
+                
+                                <!-- Page content  -->
+<doc-anchor-target id="droppy" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#droppy">#</doc-anchor-trigger>
+        <span>Droppy</span>
+    </h1>
+</doc-anchor-target>
+<div class="-mt-3 mb-12 flex flex-wrap text-sm text-gray-400 dark:text-dark-350">
+    <div class="flex items-center">
+        <div>By</div>
+        <div class="ml-2 flex items-center">
+          <div class="shrink-0 w-8 h-8 overflow-hidden rounded-full">
+            <a href="https://blog.cronje.me"><img class="object-cover" src="https://assets.cronje.me/avatars/darker.jpg"/></a>
+          </div>
+          <div class="ml-1 whitespace-nowrap text-gray-500 dark:text-dark-350"><a href="https://blog.cronje.me">Charl Cronje</a></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">(function(w,s){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://cdn.pagesense.io/js/webally/f2527eebee974243853bcd47b32631f4.js";var x=document.getElementsByTagName("script")[0];x.parentNode.insertBefore(e,x);})(window,"script");</script>
+<p>droppy is a self-hosted file storage server with a web interface and capabilities to edit files and view media directly in the browser. It is particularly well-suited to be run on low-end hardware like the Raspberry Pi.</p>
+<doc-anchor-target id="features">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#features">#</doc-anchor-trigger>
+        <span>Features</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>Responsive, scalable HTML5 interface</li>
+<li>Realtime updates of file system changes</li>
+<li>Directory and Multi-File upload</li>
+<li>Drag-and-Drop support</li>
+<li>Clipboard support to create image/text files</li>
+<li>Side-by-Side mode</li>
+<li>Simple and fast Search</li>
+<li>Shareable public download links</li>
+<li>Zip download of directories</li>
+<li>Powerful text editor with themes and broad language support</li>
+<li>Image and video gallery with touch support</li>
+<li>Audio player with seeking support</li>
+<li>Fullscreen support for editor and gallery</li>
+<li>Supports installing to the homescreen</li>
+<li>Docker images available for x86-64, ARMv6, ARMv7 and ARMv8</li>
+</ul>
+<doc-anchor-target id="general-information">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#general-information">#</doc-anchor-trigger>
+        <span>General Information</span>
+    </h2>
+</doc-anchor-target>
+<p>Two directories will be used, one for configuration and one for the actual files:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">config: defaults to ~/.droppy/config, override with -c /some/dir
+files: default ~/.droppy/files override with -f /some/dir</code></pre>
+</doc-codeblock></div>
+<p>droppy maintains an in-memory representation of the files directory. If you&#x27;re on slow storage and/or serving 100k or more files, the initial indexing on startup will likely take some time.</p>
+<doc-anchor-target id="installation">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#installation">#</doc-anchor-trigger>
+        <span>Installation</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="local-installation">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#local-installation">#</doc-anchor-trigger>
+        <span>Local Installation <span class="docs-emoji">&#x1F4E6;</span></span>
+    </h3>
+</doc-anchor-target>
+<p>With Node.js &gt;= 12.10.0 installed, run:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">npm install -g droppy
+droppy start -c /srv/droppy/config -f /srv/droppy/files</code></pre>
+</doc-codeblock></div>
+<p>To make droppy run in the background, you can use the <code v-pre>--daemon</code> option, thought it is adviced that you install it as a persistent service in your system. For Linux, see these guides:</p>
+<ul>
+<li><a href="https://github.com/silverwind/droppy/wiki/Systemd-Installation">Systemd-based distributions</a></li>
+<li><a href="https://github.com/silverwind/droppy/wiki/Debian-Installation-(Pre-Jessie)">Debian (Pre-Jessie)</a></li>
+<li><a href="https://github.com/silverwind/droppy/wiki/Nginx-reverse-proxy">Nginx reverse proxy</a></li>
+<li><a href="https://github.com/silverwind/droppy/wiki/Apache-reverse-proxy">Apache reverse proxy</a></li>
+</ul>
+<doc-anchor-target id="docker-installation">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#docker-installation">#</doc-anchor-trigger>
+        <span>Docker installation <span class="docs-emoji">&#x1F433;</span></span>
+    </h3>
+</doc-anchor-target>
+<p>The silverwind/droppy multi-arch images supports amd64, arm64, arm/v7 and arm/v6 architectures. To pull and run, use:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">ocker run --name droppy -p 127.0.0.1:8989:8989 silverwind/droppy</code></pre>
+</doc-codeblock></div>
+<p>This method uses automatic volumes for <code v-pre>/config</code> and <code v-pre>/files</code> which can be overridden through <code v-pre>-v /srv/droppy/config:/config</code> and <code v-pre>-v /srv/droppy/files:/files</code>. If you&#x27;re using existing files, it&#x27;s advisable to use <code v-pre>-e UID=1000</code> <code v-pre>-e GID=1000</code> to get new files written with correct ownership.</p>
+<doc-anchor-target id="to-update-a-docker-installation-run">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#to-update-a-docker-installation-run">#</doc-anchor-trigger>
+        <span>To update a docker installation, run</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">docker pull silverwind/droppy
+docker stop droppy &amp;&amp; docker rm droppy
+docker run --name droppy -p 127.0.0.1:8989:8989 silverwind/droppy</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="docker-compose">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#docker-compose">#</doc-anchor-trigger>
+        <span>docker-compose</span>
+    </h3>
+</doc-anchor-target>
+<p>Alternatively, you can use the example docker-compose.yml:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">curl -O https://raw.githubusercontent.com/silverwind/droppy/master/examples/docker-compose.yml
+docker-compose up</code></pre>
+</doc-codeblock></div>
+<p>This example docker-compose.yml uses the subdirectories config and files of the current working directory for storing data.</p>
+<doc-anchor-target id="caddy">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#caddy">#</doc-anchor-trigger>
+        <span>Caddy</span>
+    </h3>
+</doc-anchor-target>
+<p>See the example <a href="https://github.com/silverwind/droppy/blob/HEAD/examples/Caddyfile">Caddyfile</a>.</p>
+<doc-anchor-target id="configuration">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#configuration">#</doc-anchor-trigger>
+        <span>Configuration</span>
+    </h2>
+</doc-anchor-target>
+<p>By default, the server listens on all IPv4 and IPv6 interfaces on port 8989. On first startup, a prompt to create login data for the first account will appear. Once it&#x27;s created, login credentials are enforced. Additional accounts can be created in the options interface or the command line. Configuration is done in config/config.json, which is created with these defaults:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;listeners&quot; : [
+    {
+      &quot;host&quot;: [&quot;0.0.0.0&quot;, &quot;::&quot;],
+      &quot;port&quot;: 8989,
+      &quot;protocol&quot;: &quot;http&quot;
+    }
+  ],
+  &quot;public&quot;: false,
+  &quot;timestamps&quot;: true,
+  &quot;linkLength&quot;: 5,
+  &quot;linkExtensions&quot;: false,
+  &quot;logLevel&quot;: 2,
+  &quot;maxFileSize&quot;: 0,
+  &quot;updateInterval&quot;: 1000,
+  &quot;pollingInterval&quot;: 0,
+  &quot;keepAlive&quot;: 20000,
+  &quot;allowFrame&quot;: false,
+  &quot;readOnly&quot;: false,
+  &quot;ignorePatterns&quot;: [],
+  &quot;watch&quot;: true,
+  &quot;headers&quot;: {}
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="options">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#options">#</doc-anchor-trigger>
+        <span>Options</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li><code v-pre>listeners Array</code> - Defines on which network interfaces, port and protocols the server will listen. See listener options below. listeners has no effect when droppy is used as a module. - The default listens on <code v-pre>HTTP</code> port <code v-pre>8989</code> on all interfaces and protocols.</li>
+<li><code v-pre>public boolean</code> - When enabled, no user authentication is performed. Default: false.</li>
+<li><code v-pre>timestamps boolean</code> - When enabled, adds timestamps to log output. Default: true.</li>
+<li><code v-pre>linkLength number</code> - The amount of characters in a shared link. Default: 5.</li>
+<li><code v-pre>linkExtensions boolean</code> - Whether shared links should include the file extension. This can be used to allow other software to make a guess on the content of the file without actually - retrieving it. Default: false.</li>
+<li><code v-pre>logLevel number</code> - Logging amount. 0 is no logging, 1 is errors, 2 is info (HTTP requests), 3 is debug (Websocket communication). Default: 2.</li>
+<li><code v-pre>maxFileSize number</code> - The maximum file size in bytes a user can upload in a single file. 0 means no limit. Default: 0.</li>
+<li><code v-pre>updateInterval number</code> - Interval in milliseconds in which a single client can receive update messages through changes in the file system. Default: <code v-pre>1000</code>.</li>
+<li><code v-pre>pollingInterval number</code> - Interval in milliseconds in which the file system is polled for changes, which may necessary for files on external or network-mapped drives. Corresponds to - chokidar&#x27;s usePolling option. This is CPU-intensive. 0 disables polling. Default: 0.</li>
+<li><code v-pre>keepAlive number</code> - Interval in milliseconds in which the server sends websocket keepalive messages, which may be necessary when proxies are involved. 0 disables keepalive messages. - Default: 20000.</li>
+<li><code v-pre>uploadTimeout number</code> - Request timeout for upload requests in milliseconds. Default: 604800000 which is 7 days.</li>
+<li><code v-pre>allowFrame boolean</code> - Allow the page to be loaded into a <code v-pre>&lt;frame&gt;</code> or <code v-pre>&lt;iframe&gt;</code>. Default: false.</li>
+<li><code v-pre>readOnly boolean</code> - Treat all files as being read-only. Default: false.</li>
+<li><code v-pre>dev boolean</code> - Enable developer mode, skipping resource minification and enabling live reload. Default: false.</li>
+<li><code v-pre>ignorePatterns Array</code> - Array of file path glob patterns to ignore when indexing files. See here for supported patterns. Default: [].</li>
+<li><code v-pre>watch boolean</code> - Whether to watch the local file system for changes. Disabling this may improve performance when dealing with a large number of files, but with the downside that - changes not done via droppy won&#x27;t be detected. Default: true.</li>
+<li><code v-pre>headers Object</code>: A object with key-value pairs of custom HTTP headers to set on all responses, for example {&quot;Access-Control-Allow-Origin&quot;: &quot;*&quot;}. Default: .</li>
+</ul>
+<doc-anchor-target id="listener-options">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#listener-options">#</doc-anchor-trigger>
+        <span>Listener Options</span>
+    </h2>
+</doc-anchor-target>
+<p>listeners defines on which network interfaces, ports and protocol(s) the server will listen. For example:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">&quot;listeners&quot;: [
+  {
+    &quot;host&quot;: &quot;::&quot;,
+    &quot;port&quot;: 80,
+    &quot;socket&quot;: &quot;/tmp/droppy&quot;,
+    &quot;protocol&quot;: &quot;http&quot;
+  },
+  {
+    &quot;host&quot;: &quot;0.0.0.0&quot;,
+    &quot;port&quot;: 443,
+    &quot;protocol&quot;: &quot;https&quot;,
+    &quot;key&quot;: &quot;~/certs/example.com.key&quot;,
+    &quot;cert&quot;: &quot;~/certs/example.com.crt&quot;
+  }
+]</code></pre>
+</doc-codeblock></div>
+<p>The above configuration will result in:</p>
+<ul>
+<li>HTTP listening on all IPv4 and IPv6 interfaces, port 80 and on the unix domain socket /tmp/droppy.</li>
+<li>HTTPS listening on all IPv4 interfaces, port 443 using the provided TLS files.</li>
+</ul>
+<p>A listener object accepts these options:</p>
+<ul>
+<li>host string/Array - Network interface(s) addresses to listen on. Required when port is given. Note that &quot;::&quot; will typically bind to both IPv4 and IPv6 on all addresses but a &quot;0.0.0.0&quot; address might be required if IPv6 is disabled.</li>
+<li>port number/string/Array - Network port(s) to listen on. Required when host is given.</li>
+<li>socket string/Array - Unix domain socket(s) to listen on.</li>
+<li>protocol string - Protocol to use, http or https. Required.</li>
+</ul>
+<p>For TLS the following additional options are available. Paths can be given relative to the configuration directory and ~ is resolved as expected.</p>
+<ul>
+<li>cert <code v-pre>string</code> - Path to PEM-encoded TLS certificate file, which can include additional intermediate certificates concatenated after the main certificate. Required.</li>
+<li>key <code v-pre>string</code> - Path to PEM-encoded TLS private key file not encrypted with a passphrase. Required.</li>
+</ul>
+<doc-anchor-target id="downloading-from-the-command-line">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#downloading-from-the-command-line">#</doc-anchor-trigger>
+        <span>Downloading from the command line</span>
+    </h2>
+</doc-anchor-target>
+<p>To download shared links with curl and wget to the correct filename:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">curl -OJ url
+wget --content-disposition url</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="development">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#development">#</doc-anchor-trigger>
+        <span>Development</span>
+    </h2>
+</doc-anchor-target>
+<p>To start a live-reloading dev server:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">git clone https://github.com/silverwind/droppy &amp;&amp; cd droppy
+npm i
+node droppy start --dev</code></pre>
+</doc-codeblock></div>
+<p>The <a href="https://github.com/silverwind/droppy/blob/master/Makefile">Makefile</a> has a few tasks for updating dependencies, pushing docker images, see the comment above for dependencies of those tasks</p>
+
+                                
+                                <!-- Required only on API pages -->
+                                <doc-toolbar-member-filter-no-results />
+                            </div>
+                            <footer class="clear-both">
+                            
+                                <nav class="flex mt-14">
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/doublecommander/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                                                <span class="block mt-1">Server & Software Setup</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/dutree/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                                                <span class="block mt-1">Server & Software Setup</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
+                                    </div>
+                                </nav>
+                            </footer>
+                        </main>
+                
+                        <div class="border-t dark:border-dark-650 pt-6 mb-8">
+                            <footer class="flex flex-wrap items-center justify-between">
+                                <div>
+                                    <ul class="flex flex-wrap items-center text-sm">
+                                    </ul>
+                                </div>
+                                <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"></div>
+                            </footer>
+                        </div>
+                    </div>
+                
+                    <!-- Rendered if sidebar right is enabled -->
+                    <!-- Sidebar right skeleton-->
+                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-white border-gray-200 lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton dark:bg-dark-850 dark:border-dark-650">
+                        <div class="pl-5">
+                            <div class="w-32 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-48 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-40 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                        </div>
+                    </div>
+                
+                    <!-- User should be able to hide sidebar right -->
+                    <doc-sidebar-right v-cloak></doc-sidebar-right>
+                </div>
+
+            </div>
+        </div>
+    
+        <doc-search-mobile></doc-search-mobile>
+        <doc-back-to-top></doc-back-to-top>
+    </div>
+
+
+    <div id="docs-overlay-target"></div>
+
+    <script>window.__DOCS__ = { "title": "Server & Software Setup", icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
+</body>
+</html>
