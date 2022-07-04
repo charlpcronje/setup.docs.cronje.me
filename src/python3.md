@@ -1,4 +1,7 @@
-# How to Install Python 3 on CentOS 7.7 using yum/source and set as Default
+---
+title: How to Install Python 3 on CentOS 7.7 using yum/source and set as Default
+---
+<script type="text/javascript">(function(w,s){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://cdn.pagesense.io/js/webally/f2527eebee974243853bcd47b32631f4.js";var x=document.getElementsByTagName("script")[0];x.parentNode.insertBefore(e,x);})(window,"script");</script>
 
 - The CentOS 7 Linux distribution includes Python 2 by default. However, Python 2 has reached its EOL on January 1, 2020.
 - In this tutorial, we are going to take a look at how to get up and running with Python 3 on a CentOS 7 server.

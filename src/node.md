@@ -1,4 +1,7 @@
-# Install Node.js 16 on CentOS 8 | CentOS 7
+---
+title: Install Node.js 16 on CentOS 8 | CentOS 7
+---
+<script type="text/javascript">(function(w,s){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://cdn.pagesense.io/js/webally/f2527eebee974243853bcd47b32631f4.js";var x=document.getElementsByTagName("script")[0];x.parentNode.insertBefore(e,x);})(window,"script");</script>
 
 `Node.js` packages are provided through the NodeSource Node.js Binary Distributions via `.rpm`. Add the repository to the system using the commands below:
 

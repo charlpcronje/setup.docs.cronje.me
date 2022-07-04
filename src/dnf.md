@@ -1,4 +1,7 @@
-# Install DNF in RHEL/CentOS 7
+---
+title: Install DNF in RHEL/CentOS 7
+---
+<script type="text/javascript">(function(w,s){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://cdn.pagesense.io/js/webally/f2527eebee974243853bcd47b32631f4.js";var x=document.getElementsByTagName("script")[0];x.parentNode.insertBefore(e,x);})(window,"script");</script>
 
 DNF stands for Dandified yum. DNF is a software package manager for RPM-based Linux distributions such as Fedora, RHEL and CentOS. It is the next upcoming major version of Yum. DNF is first introduced in Fedora and has replaced to become the default package manager of the Fedora distributions. DNF is same as Yum that installs, updates and removes packages on RPM bas4ed Linux systems. DNF is introduced for improving the bottlenecks of Yum such as performance, Memory usages, Dependency resolution, speed, and some other factors. The latest stable release of DNF is 1.0 and it is written in Python.
 

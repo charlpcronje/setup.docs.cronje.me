@@ -1,4 +1,7 @@
-# VS Code Server as a Service
+---
+title: VS Code Server as a Service
+---
+<script type="text/javascript">(function(w,s){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://cdn.pagesense.io/js/webally/f2527eebee974243853bcd47b32631f4.js";var x=document.getElementsByTagName("script")[0];x.parentNode.insertBefore(e,x);})(window,"script");</script>
 
 You’ll store the service configuration in a file named `code-server.service`, in the `/usr/lib/systemd/system` directory, where systemd stores its services.
 

@@ -1,4 +1,7 @@
-# Adding some users
+---
+title: Adding some users
+---
+<script type="text/javascript">(function(w,s){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://cdn.pagesense.io/js/webally/f2527eebee974243853bcd47b32631f4.js";var x=document.getElementsByTagName("script")[0];x.parentNode.insertBefore(e,x);})(window,"script");</script>
 
 - For me it is firstly important to obviously have a root user, with a good strong password.
 - Then to have another user in the sudo group that will be my every day user
