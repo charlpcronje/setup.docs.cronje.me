@@ -1,0 +1,11 @@
+--2022-07-06 18:36:43--  https://vitux.com/wp-content/uploads/word-image-134.png?ezimgfmt=rs:418x59/rscb10/ng:webp/ngcb10
+Resolving vitux.com (vitux.com)... 172.67.72.172, 104.26.13.220, 104.26.12.220, ...
+Connecting to vitux.com (vitux.com)|172.67.72.172|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [image/webp]
+Saving to: ‘word-image-134.png?ezimgfmt=rs:418x59%2Frscb10%2Fng:webp%2Fngcb10’
+
+     0K ...                                                    25.5M=0s
+
+2022-07-06 18:36:44 (25.5 MB/s) - ‘word-image-134.png?ezimgfmt=rs:418x59%2Frscb10%2Fng:webp%2Fngcb10’ saved [3114]
+
