@@ -1,6 +1,6 @@
 ---
 title: Server & Software Setup | CRONje.ME
-label: Server
+label: SETUP
 order: 100
 authors:
   - name: Charl Cronje
@@ -137,6 +137,7 @@ _If you have the GUI installed then you might want to create a remnote desktop c
 
 ### Development
 
+- [Install Bun CLI v0.14](bun.md)
 - [Install newt `Whiptail`](newt.md)
 - [Install PHP 8](php8.md)
 - [Install Multiple Version of PHP on same server](phpMulti.md)
