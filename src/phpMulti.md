@@ -100,7 +100,7 @@ sudo dnf install php74 php74-php-fpm -y
 Install most uses extensions
 
 ```sh
-sudo dnf install php-cli php-fpm php-curl php-mysqlnd php-gd php-opcache php-zip php-intl php-common php-bcmath php-imap php-imagick php-xmlrpc php-json php-readline php-memcached php-redis php-mbstring php-apcu php-xml php-mysqlnd php-pdo php-mysql
+sudo dnf install php-cli php-fpm php-curl php-mysqlnd php-gd php-opcache php-zip php-intl php-common php-bcmath php-imap php-imagick php-xmlrpc php-json php-readline php-memcached php-redis php-mbstring php-apcu php-xml php-simplexml php-mysqlnd php-pdo php-mysql
 ```
 
 
@@ -119,7 +119,7 @@ sudo dnf install php81 php81-php-fpm -y
 Install most uses extensions
 
 ```sh
-sudo dnf install php-cli php-fpm php-curl php-mysqlnd php-gd php-opcache php-zip php-intl php-common php-bcmath php-imap php-imagick php-xmlrpc php-json php-readline php-memcached php-redis php-mbstring php-apcu php-xml php-mysqlnd php-pdo php-mysql
+sudo dnf install php-cli php-fpm php-curl php-mysqlnd php-gd php-opcache php-zip php-intl php-common php-bcmath php-imap php-imagick php-xmlrpc php-json php-readline php-memcached php-redis php-mbstring php-apcu php-xml php-simplexml php-mysqlnd php-pdo php-mysql
 ```
 
 After installing both PHP versions, start the `php74-php-fpm` service and enable it to start at boot with the following commands:
