@@ -1,6 +1,6 @@
 ---
 title: SERVER SETUP
-label: Server & Software Setup
+label: CentOS 8 Setup
 order: 100
 authors:
   - name: Charl Cronje

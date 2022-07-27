@@ -1,6 +1,6 @@
 ---
 title: Setup Virtual Hosts
-label: Server & Software Setup
+label: Configure Virtual Hosts
 order: 100
 authors:
   - name: Charl Cronje

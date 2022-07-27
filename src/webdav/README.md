@@ -1,6 +1,6 @@
 ---
 title: WebDav Setup
-label: Server & Software Setup
+label: WebDav Install & Setup
 order: 100
 authors:
   - name: Charl Cronje

@@ -1,6 +1,6 @@
 ---
 title: Docker
-label: Server & Software Setup
+label: Install Docker
 order: 100
 authors:
   - name: Charl Cronje

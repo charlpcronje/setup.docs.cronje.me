@@ -1,6 +1,6 @@
 ---
 title: Extensions
-label: Server & Software Setup
+label: Setup & Configure PHP
 order: 100
 authors:
   - name: Charl Cronje

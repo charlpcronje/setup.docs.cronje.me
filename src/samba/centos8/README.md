@@ -1,6 +1,6 @@
 ---
 title: How to Install and Configure Samba on CentOS 8
-label: Server & Software Setup
+label: Samba Install and Setup
 order: 100
 authors:
   - name: Charl Cronje
