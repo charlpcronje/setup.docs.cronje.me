@@ -1,6 +1,6 @@
 ---
-title: Setup NginX as Reverse Proxy
-label: Setup NginX as Reverse Proxy
+title: Setup NginX with Apache
+label: Setup NginX with Apache
 order: 100
 authors:
   - name: Charl Cronje
@@ -40,7 +40,7 @@ footer:
 
 I realized that a lot of the web applications I installed and will be installing does not run on port 80 and are not hosted on Apache, So I need a way to control all of this traffic, I need way to use my SSL certificate on all the ports and I need a way to point my sub-domains to a specific port so that I don't have to use `http://CRONje.ME:9000` for portainer but that I can use `portainer.CRONje.ME`.
 
-## Install NginX
+## Install NginX with Apache
 
 If you have not yet installed Nginx then run command
 

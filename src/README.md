@@ -1,6 +1,6 @@
 ---
 title: Server & Software Setup | CRONje.ME
-label: SETUP
+label: Server & Software Setup
 order: 100
 authors:
   - name: Charl Cronje

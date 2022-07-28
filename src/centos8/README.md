@@ -1,5 +1,5 @@
 ---
-title: SERVER SETUP
+title: CentOS 8 Server Setup
 label: CentOS 8 Setup
 order: 100
 authors:
