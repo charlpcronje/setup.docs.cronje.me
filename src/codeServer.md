@@ -1,6 +1,6 @@
 ---
 title: VS Code-Server Cloud IDE Platform on CentOS 7
-label: Server & Software Setup
+label: VS Code-Server Cloud IDE Platform on CentOS 7
 order: 100
 authors:
   - name: Charl Cronje

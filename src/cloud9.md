@@ -1,6 +1,6 @@
 ---
 title: Install Cloud9
-label: Server & Software Setup
+label: Install Cloud9 IDE
 order: 100
 authors:
   - name: Charl Cronje

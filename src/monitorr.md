@@ -1,6 +1,6 @@
 ---
 title: Monitor Dashboard
-label: Server & Software Setup
+label: Monitor Dashboard
 order: 100
 authors:
   - name: Charl Cronje

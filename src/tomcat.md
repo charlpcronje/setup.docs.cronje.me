@@ -1,6 +1,6 @@
 ---
 title: Install Tomcat Server
-label: Server & Software Setup
+label: Install Tomcat Server
 order: 100
 authors:
   - name: Charl Cronje

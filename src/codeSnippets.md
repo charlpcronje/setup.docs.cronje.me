@@ -1,6 +1,6 @@
 ---
 title: Install Code Snippets
-label: Server & Software Setup
+label: Install Code Snippets
 order: 100
 authors:
   - name: Charl Cronje

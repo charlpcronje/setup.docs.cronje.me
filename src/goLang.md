@@ -1,6 +1,6 @@
 ---
 title: Install Golang on CentOS 7
-label: Server & Software Setup
+label: Install Golang on CentOS 7
 order: 100
 authors:
   - name: Charl Cronje

@@ -1,6 +1,6 @@
 ---
 title: Install Bun CLI v0.1.4 (Beta) | CRONje.ME
-label: SETUP
+label: Install Bun CLI v0.1.4 (Beta) | CRONje.ME
 order: 100
 authors:
   - name: Charl Cronje

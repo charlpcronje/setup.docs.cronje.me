@@ -1,6 +1,6 @@
 ---
 title: Install CouchDB
-label: Server & Software Setup
+label: Install CouchDB
 order: 100
 authors:
   - name: Charl Cronje

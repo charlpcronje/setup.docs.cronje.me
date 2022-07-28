@@ -1,6 +1,6 @@
 ---
 title: How to Install Python 3 on CentOS 7.7 using yum/source and set as Default
-label: Server & Software Setup
+label: How to Install Python 3 on CentOS 7.7
 order: 100
 authors:
   - name: Charl Cronje

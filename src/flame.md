@@ -1,6 +1,6 @@
 ---
 title: Install Flame Dashboard
-label: Server & Software Setup
+label: Install Flame Dashboard
 order: 100
 authors:
   - name: Charl Cronje

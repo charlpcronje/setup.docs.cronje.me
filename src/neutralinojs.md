@@ -1,6 +1,6 @@
 ---
 title: Neutralinojs
-label: Server & Software Setup
+label: Neutralinojs
 order: 100
 authors:
   - name: Charl Cronje

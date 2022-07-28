@@ -1,6 +1,6 @@
 ---
 title: Install Portainer 2.0 on your Docker
-label: Server & Software Setup
+label: Install Portainer 2.0 on your Docker
 order: 100
 authors:
   - name: Charl Cronje

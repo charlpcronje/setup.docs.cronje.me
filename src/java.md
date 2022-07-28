@@ -1,6 +1,6 @@
 ---
 title: Install JAVA
-label: Server & Software Setup
+label: Install JAVA
 order: 100
 authors:
   - name: Charl Cronje

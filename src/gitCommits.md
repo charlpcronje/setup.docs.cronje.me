@@ -1,6 +1,6 @@
 ---
 title: Git Commit Messages
-label: Server & Software Setup
+label: Git Commit Messages
 order: 100
 authors:
   - name: Charl Cronje

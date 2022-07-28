@@ -1,6 +1,6 @@
 ---
 title: Install Vault
-label: Server & Software Setup
+label: Install Vault
 order: 100
 authors:
   - name: Charl Cronje

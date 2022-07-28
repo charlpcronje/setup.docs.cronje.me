@@ -1,6 +1,6 @@
 ---
 title: Install PHP 8 on CentOS/RHEL 8/7
-label: Server & Software Setup
+label: Install PHP 8 on CentOS/RHEL 8/7
 order: 100
 authors:
   - name: Charl Cronje

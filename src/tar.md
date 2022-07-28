@@ -1,6 +1,6 @@
 ---
 title: Update TAR
-label: Server & Software Setup
+label: Update TAR
 order: 100
 authors:
   - name: Charl Cronje

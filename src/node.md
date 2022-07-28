@@ -1,6 +1,6 @@
 ---
 title: Install Node.js 16 on CentOS 8 | CentOS 7
-label: Server & Software Setup
+label: Install Node.js 16 on CentOS 8 | CentOS 7
 order: 100
 authors:
   - name: Charl Cronje

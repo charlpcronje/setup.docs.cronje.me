@@ -1,6 +1,6 @@
 ---
 title: Install Node Version Manager
-label: Server & Software Setup
+label: Install Node Version Manager
 order: 100
 authors:
   - name: Charl Cronje

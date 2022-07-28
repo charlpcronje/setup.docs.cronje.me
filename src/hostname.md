@@ -1,6 +1,6 @@
 ---
 title: Set Server Hostname
-label: Server & Software Setup
+label: Set Server Hostname
 order: 100
 authors:
   - name: Charl Cronje

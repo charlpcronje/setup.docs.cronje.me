@@ -1,6 +1,6 @@
 ---
 title: Heimdal Dashboard
-label: Server & Software Setup
+label: Install Heimdal Dashboard
 order: 100
 authors:
   - name: Charl Cronje

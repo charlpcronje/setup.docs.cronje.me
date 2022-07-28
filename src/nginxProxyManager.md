@@ -1,6 +1,6 @@
 ---
 title: NginX Proxy Manager
-label: Server & Software Setup
+label: NginX Proxy Manager
 order: 100
 authors:
   - name: Charl Cronje

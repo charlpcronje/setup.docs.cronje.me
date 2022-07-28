@@ -1,6 +1,6 @@
 ---
 title: Install Fail2ban on CentOS 7
-label: Server & Software Setup
+label: Install Fail2ban on CentOS 7
 order: 100
 authors:
   - name: Charl Cronje

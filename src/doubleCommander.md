@@ -1,6 +1,6 @@
 ---
 title: Double Commander Install
-label: Server & Software Setup
+label: Double Commander Install
 order: 100
 authors:
   - name: Charl Cronje

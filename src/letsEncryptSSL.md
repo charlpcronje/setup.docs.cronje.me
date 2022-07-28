@@ -1,6 +1,6 @@
 ---
 title: Let's Encrypt Free Wildcard SSL Certificate
-label: Server & Software Setup
+label: Let's Encrypt Free Wildcard SSL Certificate
 order: 100
 authors:
   - name: Charl Cronje

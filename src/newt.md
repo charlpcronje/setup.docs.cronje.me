@@ -1,6 +1,6 @@
 ---
 title: Install Whiptail
-label: Server & Software Setup
+label: Install Whiptail
 order: 100
 authors:
   - name: Charl Cronje

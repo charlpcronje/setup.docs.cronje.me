@@ -1,6 +1,6 @@
 ---
 title: Apache Config
-label: Server & Software Setup
+label: Apache Config
 order: 100
 authors:
   - name: Charl Cronje

@@ -1,6 +1,6 @@
 ---
 title: Install SSL Certificates
-label: Server & Software Setup
+label: Install SSL Certificates
 order: 100
 authors:
   - name: Charl Cronje

@@ -1,6 +1,6 @@
 ---
 title: Installing Firefox
-label: Server & Software Setup
+label: Installing Firefox
 order: 100
 authors:
   - name: Charl Cronje

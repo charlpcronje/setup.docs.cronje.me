@@ -1,6 +1,6 @@
 ---
 title: Install dutree
-label: Server & Software Setup
+label: Install dutree
 order: 100
 authors:
   - name: Charl Cronje

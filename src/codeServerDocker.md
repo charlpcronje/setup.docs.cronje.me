@@ -1,6 +1,6 @@
 ---
-title: Code-Server Via Docker Compose
-label: Server & Software Setup
+title: Code-Server via Docker Compose
+label: Code-Server via Docker Compose
 order: 100
 authors:
   - name: Charl Cronje

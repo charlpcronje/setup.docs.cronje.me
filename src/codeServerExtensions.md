@@ -1,6 +1,6 @@
 ---
 title: VS Code Server Extensions
-label: Server & Software Setup
+label: VS Code Server Extensions
 order: 100
 authors:
   - name: Charl Cronje

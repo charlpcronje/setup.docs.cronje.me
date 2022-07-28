@@ -1,6 +1,6 @@
 ---
 title: Install Multiple Version of PHP on same server
-label: Server & Software Setup
+label: Install Multiple Version of PHP on same server
 order: 100
 authors:
   - name: Charl Cronje

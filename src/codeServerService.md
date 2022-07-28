@@ -1,6 +1,6 @@
 ---
 title: VS Code Server as a Service
-label: Server & Software Setup
+label: VS Code Server as a Service
 order: 100
 authors:
   - name: Charl Cronje

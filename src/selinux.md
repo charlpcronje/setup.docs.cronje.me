@@ -1,6 +1,6 @@
 ---
 title: How to disable SELinux on a CentOS 7
-label: Server & Software Setup
+label: How to disable SELinux on a CentOS 7
 order: 100
 authors:
   - name: Charl Cronje

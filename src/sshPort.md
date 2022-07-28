@@ -1,6 +1,6 @@
 ---
 title: Set SSH Port
-label: Server & Software Setup
+label: Set SSH Port
 order: 100
 authors:
   - name: Charl Cronje

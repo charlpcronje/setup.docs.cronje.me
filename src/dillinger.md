@@ -1,6 +1,6 @@
 ---
 title: Install Dillinger
-label: Server & Software Setup
+label: Install Dillinger
 order: 100
 authors:
   - name: Charl Cronje

@@ -1,6 +1,6 @@
 ---
 title: Install PostgreSQL
-label: Server & Software Setup
+label: Install PostgreSQL
 order: 100
 authors:
   - name: Charl Cronje

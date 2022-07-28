@@ -1,6 +1,6 @@
 ---
 title: Setup NginX as Reverse Proxy
-label: Server & Software Setup
+label: Setup NginX as Reverse Proxy
 order: 100
 authors:
   - name: Charl Cronje

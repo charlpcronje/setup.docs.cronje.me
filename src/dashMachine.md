@@ -1,6 +1,6 @@
 ---
 title: Install Dash Machine
-label: Server & Software Setup
+label: Install Dash Machine
 order: 100
 authors:
   - name: Charl Cronje

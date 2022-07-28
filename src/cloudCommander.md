@@ -1,6 +1,6 @@
 ---
 title: Install Cloud Commander
-label: Server & Software Setup
+label: Install Cloud Commander
 order: 100
 authors:
   - name: Charl Cronje

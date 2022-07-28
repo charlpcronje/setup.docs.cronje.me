@@ -1,6 +1,6 @@
 ---
 title: Install CWP Control Panel
-label: Server & Software Setup
+label: Install CWP Control Panel
 order: 100
 authors:
   - name: Charl Cronje

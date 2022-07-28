@@ -1,6 +1,6 @@
 ---
 title: Droppy
-label: Server & Software Setup
+label: Install Droppy
 order: 100
 authors:
   - name: Charl Cronje

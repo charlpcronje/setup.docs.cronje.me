@@ -1,6 +1,6 @@
 ---
 title: Installing LazyDocker
-label: Server & Software Setup
+label: Installing LazyDocker
 order: 100
 authors:
   - name: Charl Cronje

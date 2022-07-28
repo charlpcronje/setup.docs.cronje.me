@@ -1,6 +1,6 @@
 ---
 title: ACME PHP
-label: Server & Software Setup
+label: ACME PHP Install
 order: 100
 authors:
   - name: Charl Cronje

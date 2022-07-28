@@ -1,6 +1,6 @@
 ---
 title: Retype Install
-label: Server & Software Setup
+label: Retype Install
 order: 100
 authors:
   - name: Charl Cronje

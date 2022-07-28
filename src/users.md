@@ -1,6 +1,6 @@
 ---
 title: Adding some users
-label: Server & Software Setup
+label: Adding users to CentOS
 order: 100
 authors:
   - name: Charl Cronje

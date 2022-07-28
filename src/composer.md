@@ -1,6 +1,6 @@
 ---
 title: Installing PHP Composer on CentOS 7
-label: Server & Software Setup
+label: Installing PHP Composer on CentOS 7
 order: 100
 authors:
   - name: Charl Cronje

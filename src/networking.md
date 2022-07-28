@@ -1,6 +1,6 @@
 ---
 title: Network Config
-label: Server & Software Setup
+label: Network Config
 order: 100
 authors:
   - name: Charl Cronje
