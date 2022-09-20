@@ -2,7 +2,7 @@ input: src
 output: public
 url: https://setup.docs.cronje.me
 branding:
-  title: CRONje.ME Setup Docs
+  title: CRONje.ME | Server Setup Docs
   label: Docs
 authors:
   - name: Charl Cronje
