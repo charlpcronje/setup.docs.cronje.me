@@ -44,9 +44,9 @@ footer:
 
 ## Development Server Details
 
-- `Hostname`: devserve.me
-- `IP`: 104.192.7.185
-- `Server Location`: USA
+- `Hostname`: cronje.me
+- `IP`: [104.192.7.185](http://85.215.117.195/)
+- `Server Location`: Germany
 - `Hosting Provider`: ionos.com
 - `GIT Repo`: [github.com/charlpcronje/setup.docs.CRONje.ME](https://github.com/charlpcronje/setup.docs.CRONje.ME)
 - `GIT Commit Messages`: [Git Commits](gitCommits.md)
@@ -56,8 +56,6 @@ footer:
 _If you have the GUI installed then you might want to create a remnote desktop connection_
 
 - [install XRDP (Remote Desktop) Server on Centos 8](xrp.md)
-
-
 
 ### Security
 
@@ -78,7 +76,7 @@ _If you have the GUI installed then you might want to create a remnote desktop c
 
 ### Web Hosting
 
-- [Install Apache on CentOS 7](./apache.md)
+- [Install Apache on CentOS & Rocky Linux](./apache.md)
 - [Apache config](./apacheConfig.md)
 - **[Install NginX](./nginx.md)**
   - [Setup NginX with Apache](./nginxApache.md)
@@ -111,6 +109,7 @@ _If you have the GUI installed then you might want to create a remnote desktop c
 ### System
 
 - [Set Resource Limit on Process / Service](./limitProcessResources.md)
+- [Increase the size of swp file](./swp.md)
 - [Install CWP Control Panel](./cwp.md) - Do not install
 - [Install Cockpit Server Management](./cockpit.md)
 - [Install dutree](./dutree.md)
